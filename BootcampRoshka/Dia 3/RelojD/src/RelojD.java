@@ -12,7 +12,8 @@ public class RelojD {
             reloj1.tick();
             System.out.println("Tick" + (i + 1) + ":" + String.valueOf(reloj1));
         }
-
+        System.out.println("Los minutos son: " + reloj1.getMinutos());
+        System.out.println("Los segundos son: " + reloj1.getSegundos());
         Reloj reloj2 = new Reloj(3600);
         System.out.println("Reloj 2 " + String.valueOf(reloj2));
         int diferencia = reloj1.restaReloj(reloj2);
