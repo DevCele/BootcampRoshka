@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/BootcampRoshka.iml" filepath="$PROJECT_DIR$/.idea/BootcampRoshka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Dia 1/Dia 1.iml" filepath="$PROJECT_DIR$/Dia 1/Dia 1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Dia 2/Dia 2.iml" filepath="$PROJECT_DIR$/Dia 2/Dia 2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Dia 3/JuegoNim/JuegoNim.iml" filepath="$PROJECT_DIR$/Dia 3/JuegoNim/JuegoNim.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Dia 3/RelojD/RelojD.iml" filepath="$PROJECT_DIR$/Dia 3/RelojD/RelojD.iml" />
+    </modules>
+  </component>
+</project>
