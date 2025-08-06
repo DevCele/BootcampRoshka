@@ -12,6 +12,7 @@ public class RelojD {
             reloj1.tick();
             System.out.println("Tick" + (i + 1) + ":" + String.valueOf(reloj1));
         }
+        System.out.println("Los minutos son: " + reloj1.getHoras());
         System.out.println("Los minutos son: " + reloj1.getMinutos());
         System.out.println("Los segundos son: " + reloj1.getSegundos());
         Reloj reloj2 = new Reloj(3600);
