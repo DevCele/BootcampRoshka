@@ -116,6 +116,8 @@ public class Reloj {
 
     //Rama para merge metodo extra
     public void mostrarHora() {
-        System.out.println("Hora actual: " + toString());git
+        System.out.println("Hora actual: " + toString());
+
+        //Prueba conecxion remota
     }
 }
