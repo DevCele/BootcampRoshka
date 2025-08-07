@@ -5,6 +5,10 @@
 /out/
 out/
 
+
 # Ignorar archivos de configuración temporales
+
+# Ignorar archivos de configuración
+
 *.iml
 .idea/
