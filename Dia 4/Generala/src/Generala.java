@@ -1,21 +1,28 @@
 import java.util.Arrays;
+import java.util.Random;
 
 public class Generala {
     public static void main(String[] args) {
-        System.out.println(jugada("11111"));
-        System.out.println(jugada("44443"));
-        System.out.println(jugada("66611"));
-        System.out.println(jugada("12345"));
-        System.out.println(jugada("12312"));
-        System.out.println(jugada("1238x"));
-        System.out.println(jugada("123"));
-        System.out.println(jugada("23456"));
-        System.out.println(jugada("34561"));
-        System.out.println(jugada("32456"));
+        Generala g = new Generala();
 
+        String dados = g.tirarDados();
+        System.out.println("Tirada: " + dados);
+        System.out.println("Jugada: " + g.jugada(dados));
     }
 
-    public static String jugada (String jugada) {
+    public String tirarDados() {
+        Random random = new Random();
+        StringBuilder resultado = new StringBuilder();
+
+        for (int i = 0; i < 5; i++) {
+            int dado = random.nextInt(6) + 1; // genera número entre 1 y 6
+            resultado.append(dado);
+        }
+
+        return resultado.toString();
+    }
+
+    public String jugada (String jugada) {
         if (jugada.length() != 5) {
             return "INVALIDO";
         }
