@@ -1,0 +1,10 @@
+# Ignorar archivos compilados
+*.class
+
+# Ignorar carpeta de salida de compilación
+/out/
+out/
+
+# Ignorar archivos de configuración temporales
+*.iml
+.idea/
