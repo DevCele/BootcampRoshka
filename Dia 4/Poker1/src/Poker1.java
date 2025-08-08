@@ -40,3 +40,16 @@ public class Poker1 {
         };
     }
 }
+
+
+/*
+ Probabilidades:
+ 1. Escalera de Color  hay una probabilidad de 1 en 72.193 manos
+ 2. Póker hay una probabilidad de 1 en 4.165 manos
+ 3. Full House hay una probabilidad de 1 en 693 manos
+ 4. Escalera hay una probabilidad de 1 en 255 manos
+ 5. Trío hay una probabilidad de 1 en 47 manos
+ 6. Doble Par hay una probabilidad de 1 en 21 manos
+ 7. Parhay una probabilidad de 1 en 2.3 manos
+ 8. Carta Alta hay una probabilidad de Es la opción más común
+*/
