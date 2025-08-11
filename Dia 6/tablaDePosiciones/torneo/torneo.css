@@ -1,0 +1,63 @@
+/* 1) Base */
+* { box-sizing: border-box; }
+:root {
+  --border: #e6e8eb;
+  --row-alt: #f7f8fa;    /* color para filas pares */
+}
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #111;
+  background: #fff;
+}
+.container { max-width: 980px; margin: 32px auto; padding: 0 16px; }
+h1 { margin: 0 0 16px; font-size: 22px; }
+
+/* 2) Tabla */
+.table-wrap {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;     
+  overflow-x: auto;      
+  background: #fff;
+}
+.tabla {
+  width: 100%;
+  min-width: 760px;      
+  border-collapse: collapse;
+}
+.tabla thead th {
+  background: #fafbfc;
+  font-weight: 600;
+  position: sticky; top: 0; z-index: 1; /* encabezado fijo al hacer scroll */
+  border-bottom: 1px solid var(--border);
+}
+.tabla th, .tabla td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+
+/* 3) Filas pares con color distinto */
+.tabla tbody tr:nth-child(even) { background: var(--row-alt); }
+
+/* 4) Alineaciones: desde la 3ra columna (PJ en adelante) centradas */
+.tabla th:nth-child(n+3),
+.tabla td:nth-child(n+3) { text-align: center; }
+
+/* 5) Primera columna estrecha (#) */
+.tabla th:first-child, .tabla td:first-child { width: 40px; text-align: center; }
+
+/* 6) Columna club con logo + nombre alineados */
+.tabla td.club {
+  display: flex; align-items: center; gap: 10px;
+}
+.tabla td.club img {
+  width: 24px; height: 24px; object-fit: contain; display: block;
+}
+
+/* 7) Resaltar Pts */
+.tabla td:last-child, .tabla th:last-child { font-weight: 700; }
+
+/* 8) Sutileza al pasar el mouse */
+.tabla tbody tr:hover { background: #eef3ff; }
