@@ -1,0 +1,64 @@
+/* 3.1: variables y base */
+:root{
+  --size: 200px;    /* lado de cada imagen */
+  --step: 80px;     /* salto diagonal entre imágenes */
+  --frame-b: 2px;   /* grosor del borde del contenedor */
+  --card-b: 4px;    /* grosor del borde de cada imagen */
+  --frame-color: #bdbdbd;
+  --card-color: #666;
+  --card-color-hover: #2b6cff;
+}
+*{ box-sizing: border-box; }
+body{ margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color:#111; }
+.page{ max-width: 960px; margin: 32px auto; padding: 0 16px; }
+h1{ margin: 0 0 16px; font-size: 18px; font-weight: 600; }
+
+/* 3.2: el CONTENEDOR con borde, centrado horizontalmente
+   - ancho/alto calculados para que entren las 5 imágenes escalonadas */
+.frame{
+  position: relative;
+  width: calc(var(--size) + 4 * var(--step));
+  height: calc(var(--size) + 4 * var(--step));
+  margin: 16px auto;                 /* centra horizontalmente */
+  border: var(--frame-b) solid var(--frame-color);
+  border-radius: 8px;
+  background: #fff;
+  overflow: hidden;                   /* por estética, respeta el borde redondeado */
+}
+
+/* 3.3: estilo BASE de cada imagen */
+.card{
+  position: absolute;                 /* para poder ubicarlas con top/left */
+  width: var(--size);
+  height: var(--size);
+  object-fit: cover;
+  border: var(--card-b) solid var(--card-color);
+  border-radius: 6px;
+  box-shadow: 0 1px 0 rgba(0,0,0,.04);
+  transition: border-color .15s ease, transform .15s ease, opacity .15s ease;
+}
+
+/* 3.4: ubicamos cada imagen en escalera (diagonal) */
+.frame .card:nth-child(1){ top: calc(0 * var(--step)); left: calc(0 * var(--step)); z-index: 1; }
+.frame .card:nth-child(2){ top: calc(1 * var(--step)); left: calc(1 * var(--step)); z-index: 2; }
+.frame .card:nth-child(3){ top: calc(2 * var(--step)); left: calc(2 * var(--step)); z-index: 3; }
+.frame .card:nth-child(4){ top: calc(3 * var(--step)); left: calc(3 * var(--step)); z-index: 4; }
+.frame .card:nth-child(5){ top: calc(4 * var(--step)); left: calc(4 * var(--step)); z-index: 5; }
+
+/* 3.5: efectos al pasar el mouse
+   - resaltar borde
+   - subir por encima de todas (z-index grande)
+   - pequeña “elevación” visual */
+.card:hover{
+  border-color: var(--card-color-hover);
+  z-index: 999;                       /* queda arriba de las demás */
+  transform: translateY(-6px);        /* opcional: un toquecito hacia arriba */
+}
+
+/* 3.6: al pasar el mouse sobre una card,
+   TODAS las posteriores (a la derecha/abajo en el HTML) desaparecen */
+.card:hover ~ .card{
+  opacity: 0;                         /* se “apagan” */
+  visibility: hidden;                 /* no interfieren con el mouse */
+  pointer-events: none;
+}
