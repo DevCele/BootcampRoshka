@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css" />
+    <link rel="stylesheet" href="assets/fonts/poppins/poppins.css" />
+    <link rel="stylesheet" href="assets/css/reset.css"/>
+    <link rel="stylesheet" href="assets/css/estilos.css" />
+    <title>Portfolio</title>
+</head>
+<body>
+    <div class="layout">
+        <aside class="layout__aside">
+            <section class="aside__user-info">
+                <div class="user-info__general">
+                    <div class="user-info__container-image">
+                        <img src="assets/img/Foto.jpg" class="user-info__image" alt="Foto de perfil del usuario" />
+                    </div>
+                    <h2 class="user-info__name"> Celeste Jiménez </h2>
+                    <h4 class="user-info__job">Estudiante</h4>
+                </div>
+                <nav class="layout__menu">
+                    <ul class="menu__list">
+                        <li class="menu__option">
+                            <a href="index.html" class="menu__link">
+                                <i class="menu__icon fa-solid fa-house"></i>
+                                <span class="menu__overly">Home</span>
+                            </a>
+                        </li>
+                        <li class="menu__option">
+                            <a href="curriculum.html" class="menu__link">
+                                <i class="menu__icon fa-solid fa-graduation-cap"></i>
+                                <span class="menu__overly">Curriculum</span>
+                            </a>
+                        </li>
+                        <li class="menu__option">
+                            <a href="portfolio.html" class="menu__link">
+                                <i class="menu__icon fa-solid fa-code"></i>
+                                <span class="menu__overly">Portfolio</span>
+                            </a>
+                        </li>
+                         <li class="menu__option">
+                            <a href="contacto.html" class="menu__link">
+                                <i class="menu__icon fa-solid fa-user"></i>
+                                <span class="menu__overly">Contacto</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+                <div class="user-info__links">
+                    <ul class="links__social">
+
+                        <li class="social__option">
+                            <a href="https://www.linkedin.com/in/celeste-jim%C3%A9nez/" class="social_link">
+                                <i class="social__icon fa-brands fa-linkedin" ></i>
+                            </a>
+                        </li>
+
+                        <li class="social__option">
+                            <a href="b" class="social_link">
+                                <i class="social__icon fa-solid fa-envelope" ></i>
+                            </a>
+                        </li>
+                        <li class="social__option">
+                            <a href="https://github.com/DevCele" class="social_link">
+                                <i class="social__icon fa-brands fa-github" ></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+               <div class="user-info__buttons">
+                    <a href="assets/docs/CV_Celeste_Jimenez.pdf" download="CV_Celeste_Jimenez" class="user-info_btn">Descargar CV</a>
+                </div>
+                <footer class="user-info__footer">
+                    &copy; 2025 Celeste Jimenez 
+                </footer>
+            </section>
+        </aside>
+
+        <main class="layout__content">
+            <section class="content__page content__portfolio">
+
+                <header class="portfolio__header">
+                    <h2 class="portfolio__title">Mis <span class="title__color">Proyectos</span></h2>
+                </header>
+
+                <div class="portfolio__gallery">
+
+                    <article class="gallery__item">
+                        <div class="item__icon">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <div class="item__content">
+                            <h3 class="item__title">Aplicación de Peliculas</h3>
+                            <p class="item__description">Aplicación para explorar películas utilizando la API de The Movie Database (TMDB). Permite a los usuarios buscar títulos, ver información detallada y gestionar una lista personal de favoritos.</p>
+                        </div>
+                        <ul class="item__tags">
+                            <li class="tags__tag">JavaScript</li>
+                            <li class="tags__tag">HTML</li>
+                            <li class="tags__tag">CSS</li>
+                        </ul>
+                        <a href="https://github.com/DevCele/Aplicacion-de-Peliculas" target="_blank" class="item__link">Ver en GitHub <i class="fa-solid fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="gallery__item">
+                        <div class="item__icon">
+                            <i class="fa-solid fa-store"></i>
+                        </div>
+                        <div class="item__content">
+                            <h3 class="item__title">Gestor de Tareas</h3>
+                            <p class="item__description">Permite a los usuarios añadir rápidamente nuevas tareas, marcarlas como completadas con un solo clic y eliminarlas para mantener la lista siempre limpia y manejable.</p>
+                        </div>
+                        <ul class="item__tags">
+                            <li class="tags__tag">JavaScript</li>
+                            <li class="tags__tag">HTML</li>
+                            <li class="tags__tag">CSS</li>
+                            <li class="tags__tag">Vue</li>
+                        </ul>
+                        <a href="https://github.com/DevCele/Gestor-Tareas" target="_blank" class="item__link">Ver en GitHub <i class="fa-solid fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="gallery__item">
+                        <div class="item__icon">
+                            <i class="fa-solid fa-chart-bar"></i>
+                        </div>
+                        <div class="item__content">
+                            <h3 class="item__title">Amigo Secreto</h3>
+                            <p class="item__description">Esta aplicación web sencilla permite crear una lista de amigos y luego sortear aleatoriamente un nombre de la lista para juegos de "Amigo Secreto". </p>
+                        </div>
+                        <ul class="item__tags">
+                            <li class="tags__tag">HTML</li>
+                            <li class="tags__tag">CSS</li>
+                            <li class="tags__tag">JavaScript</li>
+                        </ul>
+                        <a href="https://github.com/DevCele/Amigo-Secreto" target="_blank" class="item__link">Ver en GitHub <i class="fa-solid fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="gallery__item">
+                        <div class="item__icon">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                        </div>
+                        <div class="item__content">
+                            <h3 class="item__title">Compra de Ropa</h3>
+                            <p class="item__description">Prototipo de un sistema de e-commerce de consola en Python que demuestra principios clave de la Programación Orientada a Objetos (OOP). Utiliza herencia, clases abstractas y polimorfismo para gestionar diferentes tipos de productos y un carrito de compras interactivo.</p>
+                        </div>
+                        <ul class="item__tags">
+                            <li class="tags__tag">Python</li>
+                        </ul>
+                        <a href="https://github.com/DevCele/Compra-de-Ropa" target="_blank" class="item__link">Ver en GitHub <i class="fa-solid fa-arrow-right"></i></a>
+                    </article>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
