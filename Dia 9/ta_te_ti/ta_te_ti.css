@@ -89,7 +89,7 @@ button.reset:active{ transform:translateY(1px) }
   font-size: clamp(36px, 8.5vw, 64px);
   font-weight: 800;
   letter-spacing: 1px;
-  background: radial-gradient(120% 120% at 50% 0%, #161a3a 0%, #121534 70%);
+  background: radial-gradient(120% 120% at 50% 0%, #4edcff 0%, #27cff9 70%);
   color: var(--text);
   border:1px solid #2a2e4a;
   border-radius:14px;
