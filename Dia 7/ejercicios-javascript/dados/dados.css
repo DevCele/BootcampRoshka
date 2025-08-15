@@ -4,6 +4,7 @@ body {
     background-color: #01f1e5;
     padding-top: 20px;
 }
+
 #lanzarDados {
     padding: 10px 20px;
     font-size: 1.2em;
@@ -12,7 +13,7 @@ body {
     margin-bottom: 30px;
     border: 1px solid black;
     border-radius: 10px;
-}
+} 
 .contenedor-dados {
     display: flex;
     justify-content: center;
