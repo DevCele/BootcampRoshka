@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ta-Te-Ti</title>
-  <link rel="stylesheet" href="ta_te_ti.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ta-Te-Ti</title>
+    <link rel="stylesheet" href="ta_te_ti.css">
 </head>
+
 <body>
-  <main class="app" role="application" aria-label="Ta-Te-Ti">
-    <header>
-      <h1>Ta-Te-Ti</h1>
-      <div class="controls">
-        <button class="reset" type="button" id="resetBtn">Reiniciar</button>
-      </div>
-    </header>
+    <main class="app" role="application" aria-label="Ta-Te-Ti">
+        <header>
+            <h1>Ta-Te-Ti</h1>
+            <div class="controls">
+                <button class="reset" type="button" id="resetBtn">Reiniciar</button>
+            </div>
+        </header>
+            
+        <p id="status" class="status" role="status" aria-live="polite">Turno de X</p>
 
-    <p id="status" class="status" role="status" aria-live="polite">Turno de X</p>
+        <section id="board" class="board" role="grid" aria-label="Tablero 3 por 3"></section>
 
-    <section id="board" class="board" role="grid" aria-label="Tablero 3 por 3"></section>
+        <footer>Dos jugadores locales. Usa teclado (Enter/Espacio) o mouse para marcar.</footer>
+    </main>
 
-    <footer>Dos jugadores locales. Usa teclado (Enter/Espacio) o mouse para marcar.</footer>
-  </main>
-
-  <script src="ta_te_ti.js"></script>
+    <script src="ta_te_ti.js"></script>
 </body>
+
 </html>
