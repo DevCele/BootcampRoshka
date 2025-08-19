@@ -332,3 +332,4 @@ select ciudad, provincia, count(*) as total
 
 
 
+
