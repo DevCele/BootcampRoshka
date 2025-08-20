@@ -79,3 +79,26 @@ where f.id = 1 --reemplazar por el id que se desea consultar
 
 select * from factura_detalle --consulta para ver los id ya cargados en la tabla 
 
+--Ordenadas por total
+select f.id as factura_id,
+       f.fecha_emision,
+       c.nombre  as cliente_nombre,
+       c.apellido as cliente_apellido,
+       sum(p.precio * fd.cantidad)::numeric(18,2) as total_factura
+from factura f
+join cliente c on c.id = f.cliente_id
+join factura_detalle fd on fd.factura_id = f.id
+join producto p on p.id = fd.producto_id
+group by f.id, f.fecha_emision, c.nombre, c.apellido
+order by total_factura desc;
+
+-- IVA 10%
+select f.id as factura_id,
+  round(sum(p.precio * fd.cantidad)::numeric, 2) as total_sin_iva,
+  round(sum(p.precio * fd.cantidad)::numeric * 0.10::numeric, 2) as iva_10,
+  round(sum(p.precio * fd.cantidad)::numeric * 1.10::numeric, 2) as total_con_iva
+from factura f
+join factura_detalle fd on fd.factura_id = f.id
+join producto p on p.id = fd.producto_id
+group by f.id
+order by f.id;
