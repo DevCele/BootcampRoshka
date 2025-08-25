@@ -1,0 +1,147 @@
+21-Aug-2025 15:36:18.237 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Nombre de la versión del servidor: Apache Tomcat/10.1.44
+21-Aug-2025 15:36:18.240 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:                      Aug 4 2025 13:14:17 UTC
+21-Aug-2025 15:36:18.240 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Número de versión de servidor:     10.1.44.0
+21-Aug-2025 15:36:18.240 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:                           Windows 11
+21-Aug-2025 15:36:18.240 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Versión de Systema Operativo:      10.0
+21-Aug-2025 15:36:18.241 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Arquitectura:                      amd64
+21-Aug-2025 15:36:18.241 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:                         C:\Program Files\Apache NetBeans\jdk
+21-Aug-2025 15:36:18.241 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:                       24.0.1+9
+21-Aug-2025 15:36:18.241 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Vededor JVM:                       Azul Systems, Inc.
+21-Aug-2025 15:36:18.241 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:                     C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44
+21-Aug-2025 15:36:18.241 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:                     C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44
+21-Aug-2025 15:36:18.256 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.config.file=C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44\conf\logging.properties
+21-Aug-2025 15:36:18.256 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+21-Aug-2025 15:36:18.256 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djdk.tls.ephemeralDHKeySize=2048
+21-Aug-2025 15:36:18.256 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+21-Aug-2025 15:36:18.256 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dsun.io.useCanonCaches=false
+21-Aug-2025 15:36:18.256 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.lang=ALL-UNNAMED
+21-Aug-2025 15:36:18.257 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+21-Aug-2025 15:36:18.257 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.io=ALL-UNNAMED
+21-Aug-2025 15:36:18.257 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util=ALL-UNNAMED
+21-Aug-2025 15:36:18.257 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+21-Aug-2025 15:36:18.257 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+21-Aug-2025 15:36:18.257 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.base=C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44
+21-Aug-2025 15:36:18.266 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.home=C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44
+21-Aug-2025 15:36:18.266 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.io.tmpdir=C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44\temp
+21-Aug-2025 15:36:18.312 INFORMACIÓN [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Cargada la biblioteca nativa APR de Apache Tomcat [2.0.9] con la versión APR [1.7.6].
+21-Aug-2025 15:36:18.322 INFORMACIÓN [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL inicializado correctamente [OpenSSL 3.5.0 8 Apr 2025]
+21-Aug-2025 15:36:18.588 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.init Inicializando el manejador de protocolo ["http-nio-8080"]
+
+21-Aug-2025 15:36:18.610 INFORMACIÓN [main] org.apache.catalina.startup.Catalina.load Server initialization in [642] milliseconds
+21-Aug-2025 15:36:18.674 INFORMACIÓN [main] org.apache.catalina.core.StandardService.startInternal Arrancando servicio [Catalina]
+21-Aug-2025 15:36:18.674 INFORMACIÓN [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.44]
+21-Aug-2025 15:36:18.712 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44\webapps\docs] de la aplicación web
+21-Aug-2025 15:36:19.079 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44\webapps\docs] has finished in [365] ms
+21-Aug-2025 15:36:19.080 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44\webapps\examples] de la aplicación web
+21-Aug-2025 15:36:19.430 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44\webapps\examples] has finished in [350] ms
+21-Aug-2025 15:36:19.430 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44\webapps\host-manager] de la aplicación web
+21-Aug-2025 15:36:19.467 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44\webapps\host-manager] has finished in [37] ms
+21-Aug-2025 15:36:19.467 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44\webapps\manager] de la aplicación web
+21-Aug-2025 15:36:19.503 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44\webapps\manager] has finished in [36] ms
+21-Aug-2025 15:36:19.503 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44\webapps\ROOT] de la aplicación web
+21-Aug-2025 15:36:19.528 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44\webapps\ROOT] has finished in [25] ms
+21-Aug-2025 15:36:19.532 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+21-Aug-2025 15:36:19.560 INFORMACIÓN [main] org.apache.catalina.startup.Catalina.start Server startup in [947] milliseconds
+21-Aug-2025 15:39:20.661 INFORMACIÓN [main] org.apache.catalina.core.StandardServer.await Se ha recibido un comando de apagado a través del puerto de apagado. Parando la instancia del Servidor.
+21-Aug-2025 15:39:20.661 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+21-Aug-2025 15:39:20.667 INFORMACIÓN [main] org.apache.catalina.core.StandardService.stopInternal Parando servicio [Catalina]
+21-Aug-2025 15:39:20.690 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+21-Aug-2025 15:39:20.700 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+21-Aug-2025 15:40:25.523 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Nombre de la versión del servidor: Apache Tomcat/10.1.44
+21-Aug-2025 15:40:25.526 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:                      Aug 4 2025 13:14:17 UTC
+21-Aug-2025 15:40:25.526 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Número de versión de servidor:     10.1.44.0
+21-Aug-2025 15:40:25.526 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:                           Windows 11
+21-Aug-2025 15:40:25.526 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Versión de Systema Operativo:      10.0
+21-Aug-2025 15:40:25.526 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Arquitectura:                      amd64
+21-Aug-2025 15:40:25.526 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:                         C:\Program Files\Apache NetBeans\jdk
+21-Aug-2025 15:40:25.526 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:                       24.0.1+9
+21-Aug-2025 15:40:25.526 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Vededor JVM:                       Azul Systems, Inc.
+21-Aug-2025 15:40:25.526 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:                     C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44
+21-Aug-2025 15:40:25.526 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:                     C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44
+21-Aug-2025 15:40:25.537 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.config.file=C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44\conf\logging.properties
+21-Aug-2025 15:40:25.537 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+21-Aug-2025 15:40:25.537 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djdk.tls.ephemeralDHKeySize=2048
+21-Aug-2025 15:40:25.538 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+21-Aug-2025 15:40:25.538 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dsun.io.useCanonCaches=false
+21-Aug-2025 15:40:25.538 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.lang=ALL-UNNAMED
+21-Aug-2025 15:40:25.538 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+21-Aug-2025 15:40:25.538 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.io=ALL-UNNAMED
+21-Aug-2025 15:40:25.538 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util=ALL-UNNAMED
+21-Aug-2025 15:40:25.538 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+21-Aug-2025 15:40:25.538 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+21-Aug-2025 15:40:25.538 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.base=C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44
+21-Aug-2025 15:40:25.585 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.home=C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44
+21-Aug-2025 15:40:25.585 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.io.tmpdir=C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44\temp
+21-Aug-2025 15:40:25.590 INFORMACIÓN [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Cargada la biblioteca nativa APR de Apache Tomcat [2.0.9] con la versión APR [1.7.6].
+21-Aug-2025 15:40:25.599 INFORMACIÓN [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL inicializado correctamente [OpenSSL 3.5.0 8 Apr 2025]
+21-Aug-2025 15:40:25.867 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.init Inicializando el manejador de protocolo ["http-nio-8080"]
+
+21-Aug-2025 15:40:25.886 INFORMACIÓN [main] org.apache.catalina.startup.Catalina.load Server initialization in [562] milliseconds
+21-Aug-2025 15:40:25.939 INFORMACIÓN [main] org.apache.catalina.core.StandardService.startInternal Arrancando servicio [Catalina]
+21-Aug-2025 15:40:25.939 INFORMACIÓN [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.44]
+21-Aug-2025 15:40:25.949 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44\webapps\docs] de la aplicación web
+21-Aug-2025 15:40:26.258 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44\webapps\docs] has finished in [306] ms
+21-Aug-2025 15:40:26.259 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44\webapps\examples] de la aplicación web
+21-Aug-2025 15:40:26.602 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44\webapps\examples] has finished in [343] ms
+21-Aug-2025 15:40:26.602 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44\webapps\host-manager] de la aplicación web
+21-Aug-2025 15:40:26.640 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44\webapps\host-manager] has finished in [37] ms
+21-Aug-2025 15:40:26.640 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44\webapps\manager] de la aplicación web
+21-Aug-2025 15:40:26.681 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44\webapps\manager] has finished in [41] ms
+21-Aug-2025 15:40:26.682 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44\webapps\ROOT] de la aplicación web
+21-Aug-2025 15:40:26.704 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44\webapps\ROOT] has finished in [22] ms
+21-Aug-2025 15:40:26.708 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+21-Aug-2025 15:40:26.729 INFORMACIÓN [main] org.apache.catalina.startup.Catalina.start Server startup in [841] milliseconds
+21-Aug-2025 16:11:18.729 INFORMACIÓN [main] org.apache.catalina.core.StandardServer.await Se ha recibido un comando de apagado a través del puerto de apagado. Parando la instancia del Servidor.
+21-Aug-2025 16:11:18.729 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+21-Aug-2025 16:11:18.734 INFORMACIÓN [main] org.apache.catalina.core.StandardService.stopInternal Parando servicio [Catalina]
+21-Aug-2025 16:11:18.751 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+21-Aug-2025 16:11:18.759 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+21-Aug-2025 16:11:38.547 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Nombre de la versión del servidor: Apache Tomcat/10.1.44
+21-Aug-2025 16:11:38.556 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:                      Aug 4 2025 13:14:17 UTC
+21-Aug-2025 16:11:38.557 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Número de versión de servidor:     10.1.44.0
+21-Aug-2025 16:11:38.557 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:                           Windows 11
+21-Aug-2025 16:11:38.557 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Versión de Systema Operativo:      10.0
+21-Aug-2025 16:11:38.557 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Arquitectura:                      amd64
+21-Aug-2025 16:11:38.557 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:                         C:\Program Files\Java\jdk-17
+21-Aug-2025 16:11:38.557 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:                       17.0.16+12-LTS-247
+21-Aug-2025 16:11:38.557 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Vededor JVM:                       Oracle Corporation
+21-Aug-2025 16:11:38.557 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:                     C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44
+21-Aug-2025 16:11:38.557 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:                     C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44
+21-Aug-2025 16:11:38.658 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.config.file=C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44\conf\logging.properties
+21-Aug-2025 16:11:38.658 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+21-Aug-2025 16:11:38.658 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djdk.tls.ephemeralDHKeySize=2048
+21-Aug-2025 16:11:38.658 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+21-Aug-2025 16:11:38.658 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dsun.io.useCanonCaches=false
+21-Aug-2025 16:11:38.658 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.lang=ALL-UNNAMED
+21-Aug-2025 16:11:38.659 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+21-Aug-2025 16:11:38.659 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.io=ALL-UNNAMED
+21-Aug-2025 16:11:38.659 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util=ALL-UNNAMED
+21-Aug-2025 16:11:38.659 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+21-Aug-2025 16:11:38.659 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+21-Aug-2025 16:11:38.660 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.base=C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44
+21-Aug-2025 16:11:38.660 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.home=C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44
+21-Aug-2025 16:11:38.660 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.io.tmpdir=C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44\temp
+21-Aug-2025 16:11:38.663 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Cargada la biblioteca nativa APR de Apache Tomcat [2.0.9] con la versión APR [1.7.6].
+21-Aug-2025 16:11:38.669 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL inicializado correctamente [OpenSSL 3.5.0 8 Apr 2025]
+21-Aug-2025 16:11:38.883 INFO [main] org.apache.coyote.AbstractProtocol.init Inicializando el manejador de protocolo ["http-nio-8080"]
+
+21-Aug-2025 16:11:38.907 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [595] milliseconds
+21-Aug-2025 16:11:38.966 INFO [main] org.apache.catalina.core.StandardService.startInternal Arrancando servicio [Catalina]
+21-Aug-2025 16:11:38.966 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.44]
+21-Aug-2025 16:11:38.979 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44\webapps\docs] de la aplicación web
+21-Aug-2025 16:11:39.403 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44\webapps\docs] has finished in [421] ms
+21-Aug-2025 16:11:39.403 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44\webapps\examples] de la aplicación web
+21-Aug-2025 16:11:39.747 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44\webapps\examples] has finished in [344] ms
+21-Aug-2025 16:11:39.747 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44\webapps\host-manager] de la aplicación web
+21-Aug-2025 16:11:39.787 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44\webapps\host-manager] has finished in [40] ms
+21-Aug-2025 16:11:39.787 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44\webapps\manager] de la aplicación web
+21-Aug-2025 16:11:39.823 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44\webapps\manager] has finished in [35] ms
+21-Aug-2025 16:11:39.823 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44\webapps\ROOT] de la aplicación web
+21-Aug-2025 16:11:39.849 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Celeste Jimenez\IdeaProjects\BootcampRoshka\apache-tomcat-10.1.44-windows-x64\apache-tomcat-10.1.44\webapps\ROOT] has finished in [25] ms
+21-Aug-2025 16:11:39.854 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+21-Aug-2025 16:11:39.910 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1002] milliseconds
+21-Aug-2025 17:45:34.444 INFO [main] org.apache.catalina.core.StandardServer.await Se ha recibido un comando de apagado a través del puerto de apagado. Parando la instancia del Servidor.
+21-Aug-2025 17:45:34.446 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+21-Aug-2025 17:45:34.568 INFO [main] org.apache.catalina.core.StandardService.stopInternal Parando servicio [Catalina]
+21-Aug-2025 17:45:34.592 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+21-Aug-2025 17:45:34.607 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
