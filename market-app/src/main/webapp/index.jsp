@@ -4,23 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <title>Market — Menú</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 24px; }
-    h1 { margin-bottom: 6px; }
-    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-    .card { border: 1px solid #ddd; border-radius: 8px; padding: 16px; }
-    .card h2 { margin-top: 0; }
-    ul { margin: 0; padding-left: 18px; }
-    a { text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .muted { color:#666; font-size: 0.9rem; }
-  </style>
+  <link rel="stylesheet" href="<%=request.getContextPath()%>/css/base.css">
 </head>
 <body>
+    <div class="grid">
   <h1>Market — Menú de reportes y formularios</h1>
   <p class="muted">Selecciona un reporte o un formulario.</p>
-
-  <div class="grid">
     <!-- Reportes -->
     <div class="card">
       <h2>Reportes (Tops)</h2>

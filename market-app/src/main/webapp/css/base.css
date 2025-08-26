@@ -1,0 +1,171 @@
+/* ===== Estilos globales ===== */
+body {
+  font-family: cursive;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #4edcff; /* Fondo azul */
+  padding: 24px 0;
+  overflow-y: auto;
+}
+
+/* ===== Contenedor tipo tarjeta ===== */
+.container {
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  max-width: 800px;
+  width: 100%;
+  display: grid;
+  gap: 16px;
+}
+
+/* ===== Títulos ===== */
+.container h2 {
+  text-align: center;
+  margin: 0 0 16px;
+}
+
+/* ===== Formularios ===== */
+form {
+  display: grid;
+  gap: 16px;
+  max-width: 480px;
+  width: 100%;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  font-weight: bold;
+}
+
+input, select, button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+button {
+  background-color: #0077b6;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #005f87;
+}
+
+/* ===== Tablas ===== */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  font-size: 14px;
+}
+
+th {
+  background: #f4f4f4;
+  text-align: left;
+}
+
+.actions {
+  margin-top: 12px;
+  text-align: center;
+}
+
+/* ===== Links ===== */
+a {
+  text-align: center;
+  display: inline-block;
+  margin-top: 8px;
+  color: #0077b6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Mensajes ===== */
+.error {
+  color: red;
+  font-size: 0.85em;
+}
+
+.ok {
+  color: green;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+/* ===== Tablas con estilo ===== */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden; 
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  font-size: 14px;
+}
+
+th {
+  background: #0077b6;
+  color: #fff;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+tr:hover {
+  background: #eef;
+}
+
+/* Ajustes de acciones (botones/links arriba de tabla) */
+.actions {
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.actions form {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* contenedor especial para tablas largas */
+.table-scroll {
+  max-height: calc(100vh - 220px); 
+  overflow: auto;                   
+  border-radius: 8px;
+}
+
+/* encabezado pegado arriba al hacer scroll */
+table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #0077b6;
+  color: #fff;
+}

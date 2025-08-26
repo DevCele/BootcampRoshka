@@ -5,15 +5,10 @@
 <head>
   <meta charset="UTF-8" />
   <title><%=request.getAttribute("title")%></title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 24px; }
-    table { border-collapse: collapse; width: 100%; }
-    th, td { border: 1px solid #ddd; padding: 8px; }
-    th { background: #f4f4f4; text-align: left; }
-    .actions { margin: 12px 0; }
-  </style>
+  <link rel="stylesheet" href="<%=request.getContextPath()%>/css/base.css">
 </head>
 <body>
+ <div class="container">
   <h2><%=request.getAttribute("title")%></h2>
 
 <%
@@ -70,37 +65,40 @@
   } else {
     Map<String,Object> first = data.get(0);
 %>
-  <table>
-    <thead>
-      <tr>
-        <th>Nro</th>
-<%
-      for (String k : first.keySet()) {
-%>        <th><%=k%></th>
-<%
-      }
-%>
-      </tr>
-    </thead>
-    <tbody>
-<%
-      int nro = 1;
-      for (Map<String,Object> row : data) {
-%>      <tr>
-        <td><%=nro++%></td>
-<%
-        for (Object v : row.values()) {
-%>        <td><%= v %></td>
-<%
+  <div class="table-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th>Nro</th>
+  <%
+        for (String k : first.keySet()) {
+  %>        <th><%=k%></th>
+  <%
         }
-%>      </tr>
-<%
-      }
-%>
-    </tbody>
-  </table>
+  %>
+        </tr>
+      </thead>
+      <tbody>
+  <%
+        int nro = 1;
+        for (Map<String,Object> row : data) {
+  %>      <tr>
+          <td><%=nro++%></td>
+  <%
+          for (Object v : row.values()) {
+  %>        <td><%= v %></td>
+  <%
+          }
+  %>      </tr>
+  <%
+        }
+  %>
+      </tbody>
+    </table>
+  </div>
 <%
   }
 %>
+</div>
 </body>
 </html>

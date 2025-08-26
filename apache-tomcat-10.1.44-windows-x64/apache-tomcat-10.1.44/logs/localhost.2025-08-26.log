@@ -1,0 +1,482 @@
+26-Aug-2025 09:01:48.853 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+26-Aug-2025 09:01:48.853 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+26-Aug-2025 09:01:48.856 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@71c905a3')
+26-Aug-2025 09:07:20.793 SEVERE [http-nio-8080-exec-24] org.apache.catalina.core.ApplicationDispatcher.invoke El Servlet.service() para servlet [jsp] lanzó una excepción
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [22] en el archivo jsp: [/WEB-INF/views/table.jsp]
+supportsId cannot be resolved to a variable
+19: 
+20:     <div class="actions">
+21:       <form method="get">
+22:         <% if (supportsId) { %>
+23:           <label>ID factura:
+24:             <input type="number" name="id" min="1" value="<%= idValue %>" />
+25:           </label>
+
+
+Ha tenido lugar un error en la línea: [24] en el archivo jsp: [/WEB-INF/views/table.jsp]
+idValue cannot be resolved to a variable
+21:       <form method="get">
+22:         <% if (supportsId) { %>
+23:           <label>ID factura:
+24:             <input type="number" name="id" min="1" value="<%= idValue %>" />
+25:           </label>
+26:         <% } %>
+27: 
+
+
+Ha tenido lugar un error en la línea: [28] en el archivo jsp: [/WEB-INF/views/table.jsp]
+supportsLimit cannot be resolved to a variable
+25:           </label>
+26:         <% } %>
+27: 
+28:         <% if (supportsLimit) { %>
+29:           <label>LÃ­mite:
+30:             <input type="number" name="limit" min="1" value="<%= limitValue %>"/>
+31:           </label>
+
+
+Ha tenido lugar un error en la línea: [30] en el archivo jsp: [/WEB-INF/views/table.jsp]
+limitValue cannot be resolved to a variable
+27: 
+28:         <% if (supportsLimit) { %>
+29:           <label>LÃ­mite:
+30:             <input type="number" name="limit" min="1" value="<%= limitValue %>"/>
+31:           </label>
+32:         <% } %>
+33: 
+
+
+Ha tenido lugar un error en la línea: [34] en el archivo jsp: [/WEB-INF/views/table.jsp]
+supportsId cannot be resolved to a variable
+31:           </label>
+32:         <% } %>
+33: 
+34:         <% if (supportsId || supportsLimit) { %>
+35:           <button type="submit">Aplicar</button>
+36:         <% } %>
+37: 
+
+
+Ha tenido lugar un error en la línea: [34] en el archivo jsp: [/WEB-INF/views/table.jsp]
+supportsLimit cannot be resolved to a variable
+31:           </label>
+32:         <% } %>
+33: 
+34:         <% if (supportsId || supportsLimit) { %>
+35:           <button type="submit">Aplicar</button>
+36:         <% } %>
+37: 
+
+
+Ha tenido lugar un error en la línea: [42] en el archivo jsp: [/WEB-INF/views/table.jsp]
+data cannot be resolved to a variable
+39:       </form>
+40:     </div>
+41: 
+42:     <% if (data == null || data.isEmpty()) { %>
+43:       <p>No hay datos para mostrar.</p>
+44:     <% } else { 
+45:          Map<String,Object> first = data.get(0);
+
+
+Ha tenido lugar un error en la línea: [42] en el archivo jsp: [/WEB-INF/views/table.jsp]
+data cannot be resolved
+39:       </form>
+40:     </div>
+41: 
+42:     <% if (data == null || data.isEmpty()) { %>
+43:       <p>No hay datos para mostrar.</p>
+44:     <% } else { 
+45:          Map<String,Object> first = data.get(0);
+
+
+Ha tenido lugar un error en la línea: [45] en el archivo jsp: [/WEB-INF/views/table.jsp]
+data cannot be resolved
+42:     <% if (data == null || data.isEmpty()) { %>
+43:       <p>No hay datos para mostrar.</p>
+44:     <% } else { 
+45:          Map<String,Object> first = data.get(0);
+46:     %>
+47:       <table>
+48:         <thead>
+
+
+Ha tenido lugar un error en la línea: [58] en el archivo jsp: [/WEB-INF/views/table.jsp]
+data cannot be resolved to a variable
+55:         </thead>
+56:         <tbody>
+57:           <% int nro = 1;
+58:              for (Map<String,Object> row : data) { %>
+59:             <tr>
+60:               <td><%=nro++%></td>
+61:               <% for (Object v : row.values()) { %>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:72)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:192)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:555)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:374)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:346)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:332)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:376)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:357)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:308)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:612)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:394)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:323)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:268)
+		at com.roshka.market.app.web.TopClientesServlet.doGet(TopClientesServlet.java:26)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:666)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+26-Aug-2025 09:07:25.165 SEVERE [http-nio-8080-exec-25] org.apache.catalina.core.ApplicationDispatcher.invoke El Servlet.service() para servlet [jsp] lanzó una excepción
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [22] en el archivo jsp: [/WEB-INF/views/table.jsp]
+supportsId cannot be resolved to a variable
+19: 
+20:     <div class="actions">
+21:       <form method="get">
+22:         <% if (supportsId) { %>
+23:           <label>ID factura:
+24:             <input type="number" name="id" min="1" value="<%= idValue %>" />
+25:           </label>
+
+
+Ha tenido lugar un error en la línea: [24] en el archivo jsp: [/WEB-INF/views/table.jsp]
+idValue cannot be resolved to a variable
+21:       <form method="get">
+22:         <% if (supportsId) { %>
+23:           <label>ID factura:
+24:             <input type="number" name="id" min="1" value="<%= idValue %>" />
+25:           </label>
+26:         <% } %>
+27: 
+
+
+Ha tenido lugar un error en la línea: [28] en el archivo jsp: [/WEB-INF/views/table.jsp]
+supportsLimit cannot be resolved to a variable
+25:           </label>
+26:         <% } %>
+27: 
+28:         <% if (supportsLimit) { %>
+29:           <label>LÃ­mite:
+30:             <input type="number" name="limit" min="1" value="<%= limitValue %>"/>
+31:           </label>
+
+
+Ha tenido lugar un error en la línea: [30] en el archivo jsp: [/WEB-INF/views/table.jsp]
+limitValue cannot be resolved to a variable
+27: 
+28:         <% if (supportsLimit) { %>
+29:           <label>LÃ­mite:
+30:             <input type="number" name="limit" min="1" value="<%= limitValue %>"/>
+31:           </label>
+32:         <% } %>
+33: 
+
+
+Ha tenido lugar un error en la línea: [34] en el archivo jsp: [/WEB-INF/views/table.jsp]
+supportsId cannot be resolved to a variable
+31:           </label>
+32:         <% } %>
+33: 
+34:         <% if (supportsId || supportsLimit) { %>
+35:           <button type="submit">Aplicar</button>
+36:         <% } %>
+37: 
+
+
+Ha tenido lugar un error en la línea: [34] en el archivo jsp: [/WEB-INF/views/table.jsp]
+supportsLimit cannot be resolved to a variable
+31:           </label>
+32:         <% } %>
+33: 
+34:         <% if (supportsId || supportsLimit) { %>
+35:           <button type="submit">Aplicar</button>
+36:         <% } %>
+37: 
+
+
+Ha tenido lugar un error en la línea: [42] en el archivo jsp: [/WEB-INF/views/table.jsp]
+data cannot be resolved to a variable
+39:       </form>
+40:     </div>
+41: 
+42:     <% if (data == null || data.isEmpty()) { %>
+43:       <p>No hay datos para mostrar.</p>
+44:     <% } else { 
+45:          Map<String,Object> first = data.get(0);
+
+
+Ha tenido lugar un error en la línea: [42] en el archivo jsp: [/WEB-INF/views/table.jsp]
+data cannot be resolved
+39:       </form>
+40:     </div>
+41: 
+42:     <% if (data == null || data.isEmpty()) { %>
+43:       <p>No hay datos para mostrar.</p>
+44:     <% } else { 
+45:          Map<String,Object> first = data.get(0);
+
+
+Ha tenido lugar un error en la línea: [45] en el archivo jsp: [/WEB-INF/views/table.jsp]
+data cannot be resolved
+42:     <% if (data == null || data.isEmpty()) { %>
+43:       <p>No hay datos para mostrar.</p>
+44:     <% } else { 
+45:          Map<String,Object> first = data.get(0);
+46:     %>
+47:       <table>
+48:         <thead>
+
+
+Ha tenido lugar un error en la línea: [58] en el archivo jsp: [/WEB-INF/views/table.jsp]
+data cannot be resolved to a variable
+55:         </thead>
+56:         <tbody>
+57:           <% int nro = 1;
+58:              for (Map<String,Object> row : data) { %>
+59:             <tr>
+60:               <td><%=nro++%></td>
+61:               <% for (Object v : row.values()) { %>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:72)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:192)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:555)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:374)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:346)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:332)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:376)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:357)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:308)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:612)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:394)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:323)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:268)
+		at com.roshka.market.app.web.TopGastoServlet.doGet(TopGastoServlet.java:26)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:666)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+26-Aug-2025 09:08:09.380 SEVERE [http-nio-8080-exec-24] org.apache.catalina.core.ApplicationDispatcher.invoke El Servlet.service() para servlet [jsp] lanzó una excepción
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [22] en el archivo jsp: [/WEB-INF/views/table.jsp]
+supportsId cannot be resolved to a variable
+19: 
+20:     <div class="actions">
+21:       <form method="get">
+22:         <% if (supportsId) { %>
+23:           <label>ID factura:
+24:             <input type="number" name="id" min="1" value="<%= idValue %>" />
+25:           </label>
+
+
+Ha tenido lugar un error en la línea: [24] en el archivo jsp: [/WEB-INF/views/table.jsp]
+idValue cannot be resolved to a variable
+21:       <form method="get">
+22:         <% if (supportsId) { %>
+23:           <label>ID factura:
+24:             <input type="number" name="id" min="1" value="<%= idValue %>" />
+25:           </label>
+26:         <% } %>
+27: 
+
+
+Ha tenido lugar un error en la línea: [28] en el archivo jsp: [/WEB-INF/views/table.jsp]
+supportsLimit cannot be resolved to a variable
+25:           </label>
+26:         <% } %>
+27: 
+28:         <% if (supportsLimit) { %>
+29:           <label>LÃ­mite:
+30:             <input type="number" name="limit" min="1" value="<%= limitValue %>"/>
+31:           </label>
+
+
+Ha tenido lugar un error en la línea: [30] en el archivo jsp: [/WEB-INF/views/table.jsp]
+limitValue cannot be resolved to a variable
+27: 
+28:         <% if (supportsLimit) { %>
+29:           <label>LÃ­mite:
+30:             <input type="number" name="limit" min="1" value="<%= limitValue %>"/>
+31:           </label>
+32:         <% } %>
+33: 
+
+
+Ha tenido lugar un error en la línea: [34] en el archivo jsp: [/WEB-INF/views/table.jsp]
+supportsId cannot be resolved to a variable
+31:           </label>
+32:         <% } %>
+33: 
+34:         <% if (supportsId || supportsLimit) { %>
+35:           <button type="submit">Aplicar</button>
+36:         <% } %>
+37: 
+
+
+Ha tenido lugar un error en la línea: [34] en el archivo jsp: [/WEB-INF/views/table.jsp]
+supportsLimit cannot be resolved to a variable
+31:           </label>
+32:         <% } %>
+33: 
+34:         <% if (supportsId || supportsLimit) { %>
+35:           <button type="submit">Aplicar</button>
+36:         <% } %>
+37: 
+
+
+Ha tenido lugar un error en la línea: [42] en el archivo jsp: [/WEB-INF/views/table.jsp]
+data cannot be resolved to a variable
+39:       </form>
+40:     </div>
+41: 
+42:     <% if (data == null || data.isEmpty()) { %>
+43:       <p>No hay datos para mostrar.</p>
+44:     <% } else { 
+45:          Map<String,Object> first = data.get(0);
+
+
+Ha tenido lugar un error en la línea: [42] en el archivo jsp: [/WEB-INF/views/table.jsp]
+data cannot be resolved
+39:       </form>
+40:     </div>
+41: 
+42:     <% if (data == null || data.isEmpty()) { %>
+43:       <p>No hay datos para mostrar.</p>
+44:     <% } else { 
+45:          Map<String,Object> first = data.get(0);
+
+
+Ha tenido lugar un error en la línea: [45] en el archivo jsp: [/WEB-INF/views/table.jsp]
+data cannot be resolved
+42:     <% if (data == null || data.isEmpty()) { %>
+43:       <p>No hay datos para mostrar.</p>
+44:     <% } else { 
+45:          Map<String,Object> first = data.get(0);
+46:     %>
+47:       <table>
+48:         <thead>
+
+
+Ha tenido lugar un error en la línea: [58] en el archivo jsp: [/WEB-INF/views/table.jsp]
+data cannot be resolved to a variable
+55:         </thead>
+56:         <tbody>
+57:           <% int nro = 1;
+58:              for (Map<String,Object> row : data) { %>
+59:             <tr>
+60:               <td><%=nro++%></td>
+61:               <% for (Object v : row.values()) { %>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:72)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:192)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:555)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:374)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:346)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:332)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:376)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:357)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:308)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:612)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:394)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:323)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:268)
+		at com.roshka.market.app.web.TopProveedoresServlet.doGet(TopProveedoresServlet.java:30)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:666)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:842)
+26-Aug-2025 09:59:15.133 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+26-Aug-2025 09:59:15.133 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()

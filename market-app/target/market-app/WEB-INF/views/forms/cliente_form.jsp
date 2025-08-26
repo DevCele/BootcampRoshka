@@ -4,15 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Nuevo cliente</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 24px; }
-    form { display: grid; gap: 12px; max-width: 420px; }
-    label { display: grid; gap: 6px; }
-    input[type="text"] { padding: 8px; border: 1px solid #ddd; border-radius: 4px; }
-    .error { color: #b30000; font-size: 0.9rem; }
-    .ok { background: #e6ffed; padding: 8px; border:1px solid #b2f5bf; border-radius:4px; display:inline-block; margin-bottom:12px;}
-    .actions { display:flex; gap: 8px; align-items:center; }
-  </style>
+  <link rel="stylesheet" href="<%=request.getContextPath()%>/css/base.css">
 </head>
 <body>
   <h2>Nuevo cliente</h2>
@@ -62,10 +54,10 @@
       <% } %>
     </label>
 
-    <div class="actions">
+    
       <button type="submit">Guardar</button>
       <a href="<%=request.getContextPath()%>/">Volver al menú</a>
-    </div>
+    
   </form>
 </body>
 </html>

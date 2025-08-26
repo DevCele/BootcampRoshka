@@ -5,13 +5,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Nuevo Producto</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 24px; }
-    form { display: grid; gap: 12px; max-width: 520px; }
-    label { display: grid; gap: 6px; }
-    input { padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
-    .error { color: red; font-size: 0.9em; }
-    .ok { color: green; margin-bottom: 12px; }
+  <link rel="stylesheet" href="<%=request.getContextPath()%>/css/base.css">
   </style>
 </head>
 <body>
