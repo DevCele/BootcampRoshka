@@ -480,3 +480,6 @@ Stacktrace:
 		at java.base/java.lang.Thread.run(Thread.java:842)
 26-Aug-2025 09:59:15.133 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
 26-Aug-2025 09:59:15.133 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+26-Aug-2025 10:02:02.742 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+26-Aug-2025 10:02:02.742 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+26-Aug-2025 10:02:02.744 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@247667dd')
