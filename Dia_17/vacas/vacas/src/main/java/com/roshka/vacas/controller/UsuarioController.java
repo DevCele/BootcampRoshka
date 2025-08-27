@@ -35,6 +35,11 @@ public class UsuarioController {
         return service.actualizar(id, req);
     }
 
+    @PatchMapping("/{id}")
+    public UsuarioResponse patch(@PathVariable Long id, @RequestBody UsuarioPatchRequest req) {
+        return service.patch(id, req);
+    }
+
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void eliminar(@PathVariable Long id) {

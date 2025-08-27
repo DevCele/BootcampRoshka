@@ -1,6 +1,7 @@
 package com.roshka.vacas.service;
 
 import com.roshka.vacas.dto.UsuarioCreateRequest;
+import com.roshka.vacas.dto.UsuarioPatchRequest;
 import com.roshka.vacas.dto.UsuarioResponse;
 import com.roshka.vacas.entity.Cargo;
 import com.roshka.vacas.entity.Equipo;
@@ -17,7 +18,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.List;
-import com.roshka.vacas.config.SecurityBeans;
+
 
 @Service
 @Transactional
@@ -129,7 +130,7 @@ public class UsuarioService {
     }
 
     private UsuarioResponse toResponse(Usuario u) {
-        // Calcular antigüedad "on the fly"
+
         Period antig = (u.getFechaIngreso() == null)
                 ? null
                 : Period.between(u.getFechaIngreso(), LocalDate.now());
@@ -144,8 +145,8 @@ public class UsuarioService {
                 u.getEquipo() == null ? null : u.getEquipo().getId(),
                 u.getCargo() == null ? null : u.getCargo().getId(),
                 u.getEstado(),
-                antig == null ? null : antig.toString(),  // ISO: PnYnMnD
-                pretty(antig)                              // “n años n meses n días”
+                antig == null ? null : antig.toString(),
+                pretty(antig)
         );
     }
 
@@ -156,4 +157,48 @@ public class UsuarioService {
         int d = p.getDays();
         return String.format("%d años %d meses %d días", y, m, d);
     }
+
+    @Transactional
+    public UsuarioResponse patch(Long id, UsuarioPatchRequest req) {
+        Usuario u = usuarioRepo.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Usuario no encontrado"));
+
+        if (req.nombre() != null) u.setNombre(req.nombre());
+        if (req.apellido() != null) u.setApellido(req.apellido());
+        if (req.nroCedula() != null) u.setNroCedula(req.nroCedula());
+        if (req.correo() != null) u.setCorreo(req.correo());
+
+        if (req.rolId() != null) {
+            u.setRol(rolRepo.findById(req.rolId())
+                    .orElseThrow(() -> new IllegalArgumentException("Rol no encontrado")));
+        }
+        if (req.equipoId() != null) {
+            u.setEquipo(equipoRepo.findById(req.equipoId())
+                    .orElseThrow(() -> new IllegalArgumentException("Equipo no encontrado")));
+        }
+        if (req.cargoId() != null) {
+            u.setCargo(cargoRepo.findById(req.cargoId())
+                    .orElseThrow(() -> new IllegalArgumentException("Cargo no encontrado")));
+        }
+
+        if (req.fechaIngreso() != null) {
+            validarFechaIngreso(req.fechaIngreso());
+            u.setFechaIngreso(req.fechaIngreso());
+        }
+        if (req.diasVacaciones() != null) u.setDiasVacaciones(req.diasVacaciones());
+        if (req.estado() != null) u.setEstado(req.estado());
+        if (req.telefono() != null) u.setTelefono(req.telefono());
+        if (req.fechaNacimiento() != null) u.setFechaNacimiento(req.fechaNacimiento());
+        if (req.diasVacacionesRestante() != null) u.setDiasVacacionesRestante(req.diasVacacionesRestante());
+        if (req.requiereCambioContrasena() != null) u.setRequiereCambioContrasena(req.requiereCambioContrasena());
+
+        // contraseña: si viene, encriptar y guardar
+        if (req.contrasena() != null && !req.contrasena().isBlank()) {
+            u.setContrasena(passwordEncoder.encode(req.contrasena()));
+        }
+
+        u = usuarioRepo.save(u);
+        return toResponse(u);
+    }
+
 }
