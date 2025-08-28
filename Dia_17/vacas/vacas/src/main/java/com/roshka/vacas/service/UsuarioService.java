@@ -11,13 +11,16 @@ import com.roshka.vacas.repository.CargoRepository;
 import com.roshka.vacas.repository.EquipoRepository;
 import com.roshka.vacas.repository.RolRepository;
 import com.roshka.vacas.repository.UsuarioRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+
 import java.time.LocalDate;
 import java.time.Period;
-import java.util.List;
+
 
 
 @Service
@@ -68,8 +71,17 @@ public class UsuarioService {
     }
 
     @Transactional(readOnly = true)
-    public List<UsuarioResponse> listar() {
-        return usuarioRepo.findAll().stream().map(this::toResponse).toList();
+    public Page<UsuarioResponse> listar(Long equipoId, Long rolId, Long cargoId, Pageable pageable) {
+        Page<Usuario> page = (equipoId == null && rolId == null && cargoId == null)
+                ? usuarioRepo.findAll(pageable)
+                : usuarioRepo.findByFilters(equipoId, rolId, cargoId, pageable);
+        return page.map(this::toResponse);
+    }
+
+
+    @Transactional(readOnly = true)
+    public Page<UsuarioResponse> listar(Pageable pageable) {
+        return listar(null, null, null, pageable);
     }
 
     @Transactional(readOnly = true)
@@ -158,6 +170,7 @@ public class UsuarioService {
         return String.format("%d años %d meses %d días", y, m, d);
     }
 
+    // -------Metodo Patch
     @Transactional
     public UsuarioResponse patch(Long id, UsuarioPatchRequest req) {
         Usuario u = usuarioRepo.findById(id)
