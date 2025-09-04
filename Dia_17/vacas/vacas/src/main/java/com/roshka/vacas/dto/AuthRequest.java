@@ -1,4 +1,6 @@
 package com.roshka.vacas.dto;
 
-public record AuthRequest() {
-}
+public record AuthRequest(
+        String correo,
+        String contrasena
+) { }

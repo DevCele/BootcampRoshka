@@ -1,4 +1,6 @@
 package com.roshka.vacas.dto;
 
-public record AuthResponse() {
+public record AuthResponse(
+        String token
+) {
 }

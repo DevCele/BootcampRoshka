@@ -1,5 +1,7 @@
 package com.roshka.vacas.dto;
 
+import java.time.LocalDate;
+
 public record UsuarioResponse(
         Long id,
         String nombre,
@@ -10,6 +12,12 @@ public record UsuarioResponse(
         Long equipoId,
         Long cargoId,
         Boolean estado,
-        String antiguedadIso,
-        String antiguedadTexto
+        String antiguedad,
+        String antiguedadPretty,
+        String telefono,
+        LocalDate fechaIngreso,
+        LocalDate fechaNacimiento,
+        Integer diasVacaciones,
+        Integer diasVacacionesRestante,
+        Boolean requiereCambioContrasena
 ) {}

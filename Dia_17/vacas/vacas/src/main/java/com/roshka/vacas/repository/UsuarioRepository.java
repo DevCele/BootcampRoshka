@@ -7,8 +7,21 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
+import java.util.Optional;
+
 
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
+
+    @Query("""
+        SELECT u FROM Usuario u
+        JOIN FETCH u.rol
+        JOIN FETCH u.cargo
+        JOIN FETCH u.equipo
+        WHERE u.correo = :correo
+    """)
+    Optional<Usuario> findWithDetailsByCorreo(@Param("correo") String correo);
+
+
     @Query(
             value = """
             select u from Usuario u
@@ -27,5 +40,7 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
                                 @Param("rolId") Long rolId,
                                 @Param("cargoId") Long cargoId,
                                 Pageable pageable);
+
+    Optional<Usuario> findByCorreo(String correo);
 }
 

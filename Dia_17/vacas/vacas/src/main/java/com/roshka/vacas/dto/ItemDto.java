@@ -1,4 +1,6 @@
 package com.roshka.vacas.dto;
 
-public record ItemDto() {
-}
+public record ItemDto(
+        Long id,
+        String nombre
+) {}

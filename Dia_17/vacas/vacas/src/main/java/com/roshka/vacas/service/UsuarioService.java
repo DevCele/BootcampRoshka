@@ -63,9 +63,9 @@ public class UsuarioService {
                 .telefono(req.telefono())
                 .fechaNacimiento(req.fechaNacimiento())
                 .diasVacacionesRestante(req.diasVacacionesRestante())
-                .requiereCambioContrasena(req.requiereCambioContrasena())
+                .requiereCambioContrasena(true)
                 .build();
-        u.setContrasena(passwordEncoder.encode(req.contrasena()));
+        u.setContrasena(passwordEncoder.encode("usuario123"));
         u = usuarioRepo.save(u);
         return toResponse(u);
     }
@@ -142,7 +142,6 @@ public class UsuarioService {
     }
 
     private UsuarioResponse toResponse(Usuario u) {
-
         Period antig = (u.getFechaIngreso() == null)
                 ? null
                 : Period.between(u.getFechaIngreso(), LocalDate.now());
@@ -158,9 +157,16 @@ public class UsuarioService {
                 u.getCargo() == null ? null : u.getCargo().getId(),
                 u.getEstado(),
                 antig == null ? null : antig.toString(),
-                pretty(antig)
+                pretty(antig),
+                u.getTelefono(),
+                u.getFechaIngreso(),
+                u.getFechaNacimiento(),
+                u.getDiasVacaciones(),
+                u.getDiasVacacionesRestante(),
+                u.getRequiereCambioContrasena()
         );
     }
+
 
     private static String pretty(Period p) {
         if (p == null) return null;
@@ -204,8 +210,6 @@ public class UsuarioService {
         if (req.fechaNacimiento() != null) u.setFechaNacimiento(req.fechaNacimiento());
         if (req.diasVacacionesRestante() != null) u.setDiasVacacionesRestante(req.diasVacacionesRestante());
         if (req.requiereCambioContrasena() != null) u.setRequiereCambioContrasena(req.requiereCambioContrasena());
-
-        // contraseña: si viene, encriptar y guardar
         if (req.contrasena() != null && !req.contrasena().isBlank()) {
             u.setContrasena(passwordEncoder.encode(req.contrasena()));
         }
