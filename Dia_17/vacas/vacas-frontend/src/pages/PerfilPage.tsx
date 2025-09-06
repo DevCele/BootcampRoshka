@@ -162,174 +162,230 @@ export default function PerfilPage() {
 
   if (!perfil) return <p>Cargando perfil...</p>;
 
-  return (
-    <div className="container" style={{ maxWidth: 600, margin: "40px auto" }}>
-      <h2>
-        {isNew
-          ? "Crear nuevo usuario"
-          : isOwnProfile
-          ? "Mi perfil"
-          : `Editar perfil de usuario #${perfil.id}`}
-      </h2>
+    return (
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Fondo azul */}
+      <div
+        className="absolute inset-0 bg-brand-blue"
+        style={{
+          backgroundImage: "url('/ilustracion-herov3.svg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className="absolute inset-0 bg-brand-blue/40"></div>
+      </div>
 
-      {mensaje && <p style={{ color: "green" }}>{mensaje}</p>}
-      {error && <p style={{ color: "crimson" }}>{error}</p>}
+      {/* Card */}
+      <div className="relative z-10 w-full max-w-3xl bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl p-10">
+        <h2 className="text-2xl font-bold text-brand-blue mb-6">
+          {isNew
+            ? "Crear nuevo usuario"
+            : isOwnProfile
+            ? "Mi perfil"
+            : `Editar perfil de usuario #${perfil.id}`}
+        </h2>
 
-      <form onSubmit={onSubmit} style={{ display: "grid", gap: "1rem" }}>
-        <label>
-          Nombre
-          <input name="nombre" value={perfil.nombre} onChange={onChange} required />
-        </label>
+        {mensaje && <p className="text-green-600 mb-4">{mensaje}</p>}
+        {error && <p className="text-red-600 mb-4">{error}</p>}
 
-        <label>
-          Apellido
-          <input name="apellido" value={perfil.apellido} onChange={onChange} required />
-        </label>
+        <form onSubmit={onSubmit} className="grid gap-4">
+          <div>
+            <label className="block text-sm font-medium mb-1">Nombre</label>
+            <input
+              name="nombre"
+              value={perfil.nombre}
+              onChange={onChange}
+              required
+              className="w-full border rounded-lg px-3 py-2"
+            />
+          </div>
 
-        <label>
-          Número de cédula
-          <input
-            name="nroCedula"
-            type="number"
-            value={perfil.nroCedula ?? ""}
-            onChange={onChange}
-          />
-        </label>
+          <div>
+            <label className="block text-sm font-medium mb-1">Apellido</label>
+            <input
+              name="apellido"
+              value={perfil.apellido}
+              onChange={onChange}
+              required
+              className="w-full border rounded-lg px-3 py-2"
+            />
+          </div>
 
-        <label>
-          Correo electrónico
-          <input
-            name="correo"
-            type="email"
-            value={perfil.correo}
-            onChange={onChange}
-            required
-          />
-        </label>
+          <div>
+            <label className="block text-sm font-medium mb-1">Número de cédula</label>
+            <input
+              name="nroCedula"
+              type="number"
+              value={perfil.nroCedula ?? ""}
+              onChange={onChange}
+              className="w-full border rounded-lg px-3 py-2"
+            />
+          </div>
 
-        <label>
-          Teléfono
-          <input
-            name="telefono"
-            value={perfil.telefono ?? ""}
-            onChange={onChange}
-          />
-        </label>
+          <div>
+            <label className="block text-sm font-medium mb-1">Correo electrónico</label>
+            <input
+              name="correo"
+              type="email"
+              value={perfil.correo}
+              onChange={onChange}
+              required
+              className="w-full border rounded-lg px-3 py-2"
+            />
+          </div>
 
-        <label>
-          Fecha de ingreso
-          <input
-            name="fechaIngreso"
-            type="date"
-            value={perfil.fechaIngreso ?? ""}
-            onChange={onChange}
-          />
-        </label>
+          <div>
+            <label className="block text-sm font-medium mb-1">Teléfono</label>
+            <input
+              name="telefono"
+              value={perfil.telefono ?? ""}
+              onChange={onChange}
+              className="w-full border rounded-lg px-3 py-2"
+            />
+          </div>
 
-        <label>
-          Fecha de nacimiento
-          <input
-            name="fechaNacimiento"
-            type="date"
-            value={perfil.fechaNacimiento ?? ""}
-            onChange={onChange}
-          />
-        </label>
+          <div>
+            <label className="block text-sm font-medium mb-1">Fecha de ingreso</label>
+            <input
+              name="fechaIngreso"
+              type="date"
+              value={perfil.fechaIngreso ?? ""}
+              onChange={onChange}
+              className="w-full border rounded-lg px-3 py-2"
+            />
+          </div>
 
-        {/* Solo en edición/ver, no en creación */}
-        {!isNew && (
-          <>
-            <label>
-              Días de vacaciones
-              <input
-                name="diasVacaciones"
-                type="number"
-                value={perfil.diasVacaciones ?? ""}
-                onChange={onChange}
-              />
-            </label>
+          <div>
+            <label className="block text-sm font-medium mb-1">Fecha de nacimiento</label>
+            <input
+              name="fechaNacimiento"
+              type="date"
+              value={perfil.fechaNacimiento ?? ""}
+              onChange={onChange}
+              className="w-full border rounded-lg px-3 py-2"
+            />
+          </div>
 
-            <label>
-              Días de vacaciones restantes
-              <input
-                name="diasVacacionesRestante"
-                type="number"
-                value={perfil.diasVacacionesRestante ?? ""}
-                onChange={onChange}
-              />
-            </label>
-          </>
-        )}
+          {!isNew && (
+            <>
+              <div>
+                <label className="block text-sm font-medium mb-1">Días de vacaciones</label>
+                <input
+                  name="diasVacaciones"
+                  type="number"
+                  value={perfil.diasVacaciones ?? ""}
+                  onChange={onChange}
+                  className="w-full border rounded-lg px-3 py-2"
+                />
+              </div>
 
-        <label>
-          <input
-            type="checkbox"
-            name="estado"
-            checked={perfil.estado ?? false}
-            onChange={onChange}
-          />
-          Activo
-        </label>
+              <div>
+                <label className="block text-sm font-medium mb-1">Días de vacaciones restantes</label>
+                <input
+                  name="diasVacacionesRestante"
+                  type="number"
+                  value={perfil.diasVacacionesRestante ?? ""}
+                  onChange={onChange}
+                  className="w-full border rounded-lg px-3 py-2"
+                />
+              </div>
+            </>
+          )}
 
-        <label>
-          <input
-            type="checkbox"
-            name="requiereCambioContrasena"
-            checked={perfil.requiereCambioContrasena ?? false}
-            onChange={onChange}
-          />
-          Requiere cambio de contraseña
-        </label>
+          <label className="flex items-center gap-2">
+            <input
+              type="checkbox"
+              name="estado"
+              checked={perfil.estado ?? false}
+              onChange={onChange}
+            />
+            Activo
+          </label>
 
-        <label>
-          Rol
-          <select name="rolId" value={perfil.rolId} onChange={onChange} required>
-            <option value="">Selecciona un Rol</option>
-            {roles.map((r) => (
-              <option key={r.id} value={r.id}>
-                {r.nombre}
-              </option>
-            ))}
-          </select>
-        </label>
+          <label className="flex items-center gap-2">
+            <input
+              type="checkbox"
+              name="requiereCambioContrasena"
+              checked={perfil.requiereCambioContrasena ?? false}
+              onChange={onChange}
+            />
+            Requiere cambio de contraseña
+          </label>
 
-        <label>
-          Cargo
-          <select name="cargoId" value={perfil.cargoId} onChange={onChange} required>
-            <option value="">Selecciona un Cargo</option>
-            {cargos.map((c) => (
-              <option key={c.id} value={c.id}>
-                {c.nombre}
-              </option>
-            ))}
-          </select>
-        </label>
+          <div>
+            <label className="block text-sm font-medium mb-1">Rol</label>
+            <select
+              name="rolId"
+              value={perfil.rolId}
+              onChange={onChange}
+              required
+              className="w-full border rounded-lg px-3 py-2"
+            >
+              <option value="">Selecciona un Rol</option>
+              {roles.map((r) => (
+                <option key={r.id} value={r.id}>
+                  {r.nombre}
+                </option>
+              ))}
+            </select>
+          </div>
 
-        <label>
-          Equipo
-          <select name="equipoId" value={perfil.equipoId} onChange={onChange} required>
-            <option value="">Selecciona un Equipo</option>
-            {equipos.map((e) => (
-              <option key={e.id} value={e.id}>
-                {e.nombre}
-              </option>
-            ))}
-          </select>
-        </label>
+          <div>
+            <label className="block text-sm font-medium mb-1">Cargo</label>
+            <select
+              name="cargoId"
+              value={perfil.cargoId}
+              onChange={onChange}
+              required
+              className="w-full border rounded-lg px-3 py-2"
+            >
+              <option value="">Selecciona un Cargo</option>
+              {cargos.map((c) => (
+                <option key={c.id} value={c.id}>
+                  {c.nombre}
+                </option>
+              ))}
+            </select>
+          </div>
 
-        <div style={{ display: "flex", gap: "1rem" }}>
-          <button type="submit">
-            {isNew ? "Crear usuario" : "Guardar cambios"}
-          </button>
-          <button
-            type="button"
-            onClick={() => navigate(-1)}
-            style={{ background: "lightgray" }}
-          >
-            Cancelar
-          </button>
-        </div>
-      </form>
+          <div>
+            <label className="block text-sm font-medium mb-1">Equipo</label>
+            <select
+              name="equipoId"
+              value={perfil.equipoId}
+              onChange={onChange}
+              required
+              className="w-full border rounded-lg px-3 py-2"
+            >
+              <option value="">Selecciona un Equipo</option>
+              {equipos.map((e) => (
+                <option key={e.id} value={e.id}>
+                  {e.nombre}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div className="flex gap-4 mt-4">
+            <button
+              type="submit"
+              onClick={() => navigate(-1)}
+              className="flex-1 bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
+            >
+              {isNew ? "Crear usuario" : "Guardar cambios"}
+            </button>
+            <button
+              type="button"
+              onClick={() => navigate(-1)}
+              className="flex-1 bg-gray-300 py-3 rounded-lg font-semibold hover:bg-gray-400 transition"
+            >
+              Cancelar
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

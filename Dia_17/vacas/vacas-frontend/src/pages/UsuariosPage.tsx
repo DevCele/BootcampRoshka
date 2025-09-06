@@ -94,91 +94,155 @@ export default function UsuariosPage() {
     setPage(0);
   };
 
-  if (!puedeVer) return <p>No tenés permisos para ver esta página.</p>;
+    if (!puedeVer) return <p>No tenés permisos para ver esta página.</p>;
   if (loading) return <p>Cargando usuarios...</p>;
 
   return (
-    <div style={{ padding: 24 }}>
-      <h2>Listado de usuarios</h2>
-
-      {error && <p style={{ color: "crimson" }}>{error}</p>}
-
-      <div style={{ marginBottom: 16 }}>
-        <button onClick={() => navigate("/usuarios/nuevo")}>
-          ➕ Crear Usuario
-        </button>
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Fondo azul sólido */}
+      <div
+        className="absolute inset-0 bg-brand-blue"
+        style={{
+          backgroundImage: "url('/ilustracion-herov3.svg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className="absolute inset-0 bg-brand-blue/40"></div>
       </div>
 
-      <div style={{ display: "flex", gap: 8, marginBottom: 16 }}>
-        <select value={rolId} onChange={(e) => setRolId(e.target.value)}>
-          <option value="">Filtrar por Rol</option>
-          {roles.map((r) => (
-            <option key={r.id} value={r.id}>{r.nombre}</option>
-          ))}
-        </select>
+      {/* Contenedor principal */}
+      <div className="relative z-10 w-full max-w-6xl bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl p-10">
+        <h2 className="text-2xl font-bold text-brand-blue mb-6">
+          Listado de usuarios
+        </h2>
 
-        <select value={equipoId} onChange={(e) => setEquipoId(e.target.value)}>
-          <option value="">Filtrar por Equipo</option>
-          {equipos.map((e) => (
-            <option key={e.id} value={e.id}>{e.nombre}</option>
-          ))}
-        </select>
+        {error && (
+          <p className="text-red-600 mb-4">{error}</p>
+        )}
 
-        <select value={cargoId} onChange={(e) => setCargoId(e.target.value)}>
-          <option value="">Filtrar por Cargo</option>
-          {cargos.map((c) => (
-            <option key={c.id} value={c.id}>{c.nombre}</option>
-          ))}
-        </select>
-
-        <button onClick={limpiarFiltros}>Limpiar filtros</button>
-      </div>
-
-      <table border={1} cellPadding={8} cellSpacing={0} style={{ width: "100%", marginTop: 16 }}>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Correo</th>
-            <th>Antigüedad</th>
-            <th>Estado</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          {usuarios.map((u) => (
-            <tr key={u.id}>
-              <td>{u.id}</td>
-              <td>{u.nombre} {u.apellido}</td>
-              <td>{u.correo}</td>
-              <td>{u.antiguedadPretty ?? "-"}</td>
-              <td>{u.estado === true ? "Activo" : "Inactivo"}</td>
-              <td>
-                <button onClick={() => navigate(`/usuarios/${u.id}`)}>Editar</button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-
-      <div style={{ marginTop: 16 }}>
-        {Array.from({ length: totalPages }, (_, i) => (
+        <div className="mb-4">
           <button
-            key={i}
-            onClick={() => setPage(i)}
-            disabled={i === page}
-            style={{ marginRight: 4 }}
+            onClick={() => navigate("/usuarios/nuevo")}
+            className="px-4 py-2 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition"
           >
-            {i + 1}
+            ➕ Crear Usuario
           </button>
-        ))}
-        <button
+        </div>
+
+        {/* Filtros */}
+        <div className="flex flex-wrap gap-4 mb-6">
+          <select
+            value={rolId}
+            onChange={(e) => setRolId(e.target.value)}
+            className="px-3 py-2 border rounded-lg"
+          >
+            <option value="">Filtrar por Rol</option>
+            {roles.map((r) => (
+              <option key={r.id} value={r.id}>{r.nombre}</option>
+            ))}
+          </select>
+
+          <select
+            value={equipoId}
+            onChange={(e) => setEquipoId(e.target.value)}
+            className="px-3 py-2 border rounded-lg"
+          >
+            <option value="">Filtrar por Equipo</option>
+            {equipos.map((e) => (
+              <option key={e.id} value={e.id}>{e.nombre}</option>
+            ))}
+          </select>
+
+          <select
+            value={cargoId}
+            onChange={(e) => setCargoId(e.target.value)}
+            className="px-3 py-2 border rounded-lg"
+          >
+            <option value="">Filtrar por Cargo</option>
+            {cargos.map((c) => (
+              <option key={c.id} value={c.id}>{c.nombre}</option>
+            ))}
+          </select>
+
+          <button
+            onClick={limpiarFiltros}
+            className="px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition"
+          >
+            Limpiar filtros
+          </button>
+        </div>
+
+        {/* Tabla */}
+        <div className="overflow-x-auto">
+          <table className="w-full border-collapse rounded-lg overflow-hidden">
+            <thead className="bg-blue-100 text-blue-800">
+              <tr>
+                <th className="px-4 py-2 text-left">ID</th>
+                <th className="px-4 py-2 text-left">Nombre</th>
+                <th className="px-4 py-2 text-left">Correo</th>
+                <th className="px-4 py-2 text-left">Antigüedad</th>
+                <th className="px-4 py-2 text-left">Estado</th>
+                <th className="px-4 py-2 text-left">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              {usuarios.map((u) => (
+                <tr key={u.id} className="border-b last:border-0">
+                  <td className="px-4 py-2">{u.id}</td>
+                  <td className="px-4 py-2">{u.nombre} {u.apellido}</td>
+                  <td className="px-4 py-2">{u.correo}</td>
+                  <td className="px-4 py-2">{u.antiguedadPretty ?? "-"}</td>
+                  <td className="px-4 py-2">
+                    {u.estado === true ? (
+                      <span className="px-2 py-1 text-xs font-medium bg-green-100 text-green-700 rounded-full">
+                        Activo
+                      </span>
+                    ) : (
+                      <span className="px-2 py-1 text-xs font-medium bg-red-100 text-red-700 rounded-full">
+                        Inactivo
+                      </span>
+                    )}
+                  </td>
+                  <td className="px-4 py-2">
+                    <button
+                      onClick={() => navigate(`/usuarios/${u.id}`)}
+                      className="px-3 py-1 bg-blue-600 text-white rounded-lg text-sm hover:bg-blue-700 transition"
+                    >
+                      Editar
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        {/* Paginación */}
+        <div className="mt-6 flex items-center gap-2">
+          {Array.from({ length: totalPages }, (_, i) => (
+            <button
+              key={i}
+              onClick={() => setPage(i)}
+              disabled={i === page}
+              className={`px-3 py-1 rounded-lg text-sm ${
+                i === page
+                  ? "bg-blue-600 text-white font-semibold"
+                  : "bg-gray-200 hover:bg-gray-300"
+              }`}
+            >
+              {i + 1}
+            </button>
+          ))}
+          <button
             type="button"
             onClick={() => navigate(-1)}
-            style={{ background: "lightgray" }}
-            >
+            className="ml-auto px-4 py-2 bg-gray-400 text-white rounded-lg hover:bg-gray-500 transition"
+          >
             Cancelar
-        </button>
+          </button>
+        </div>
       </div>
     </div>
   );

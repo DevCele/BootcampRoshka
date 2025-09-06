@@ -109,5 +109,6 @@ public class AuthController {
         String token = jwtService.generateToken(uConDetalle);
         return ResponseEntity.ok(new AuthResponse(token));
     }
+    
 
 }
