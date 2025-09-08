@@ -14,7 +14,7 @@ export default function App() {
 
       <Route element={<ProtectedRoute />}>
         <Route path="/" element={<Dashboard />} />
-        <Route path="/usuarios" element={<UsuariosPage />} />          {/* Lista de usuarios */}
+        <Route path="/usuarios" element={<UsuariosPage />} />         
         <Route path="/usuarios/:id" element={<PerfilPage />} /> 
       </Route>
 
